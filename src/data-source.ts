@@ -10,5 +10,5 @@ export const AppDataSource = new DataSource({
     database: "website_metona",
     synchronize: true,
     logging: false,
-    entities: ["dist/src/model/*.js"]
+    entities: [__dirname + '/entity/*.{js,ts}'],
 })
