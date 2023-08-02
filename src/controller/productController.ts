@@ -23,6 +23,12 @@ class ProductController{
             })
         }
     }
+    editProduct= async (req: Request, res: Response)=>{
+        let id = req.params.id;
+        let product = req.body;
+        await productService.editProduct(id,product);
+        res.status(200).json({message:"edit successfully"})
+    }
 
     remove = async (req:Request, res:Response)=>{
         let id = req.params.id
@@ -32,3 +38,4 @@ class ProductController{
         })
     }
 }
+export default new ProductController();

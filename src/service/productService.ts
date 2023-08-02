@@ -37,6 +37,19 @@ class ProductService{
     add = async (product)=>{
         await this.productRepository.save(product);
     }
+    editProduct = async (id, product)=>{
+        return await this.productRepository.update(
+            { idProduct: id },
+            {
+                nameProduct: product.nameProduct,
+                priceProduct: product.priceProduct,
+                quantityProduct: product.quantityProduct,
+                descriptionProduct: product.descriptionProduct,
+                image: product.image,
+                category: product.category
+            }
+        );
+    }
 
     remove = async (id)=>{
         let products = await this.productRepository.find(
