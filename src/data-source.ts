@@ -7,8 +7,9 @@ export const AppDataSource = new DataSource({
     port: 3306,
     username: "root",
     password: "123456",
-    database: "sales",
+    database: "website_metona",
     synchronize: true,
     logging: false,
-    entities: ["dist/src/model/*.js"]
-})
+    entities: [__dirname + "/entity/*.{js, ts}"],
+    // entities: ["dist/src/model/*.js"]
+});
