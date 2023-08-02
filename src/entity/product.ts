@@ -1,21 +1,24 @@
+
+import { Order } from 'src/entity/order';
 import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
 import { Category } from "./categogy";
 import { Image } from "./image";
-
 @Entity()
 export class Product {
     @PrimaryColumn()
-    idProduct:number;
-    @Column({type:"varchar"})
-    nameProduct:string;
+    idProduct: number;
+    @Column({ type: "varchar" })
+    nameProduct: string;
     @Column()
-    priceProduct:number;
+    priceProduct: number;
     @Column()
-    quantityProduct:number;
+    quantityProduct: number;
     @Column()
-    descriptionProduct:string;
+    descriptionProduct: string;
     @OneToMany(() => Image, (image) => image.product)
     image: Image[];
-    @ManyToOne(()=> Category,(Category)=>Category.products)
+    @ManyToOne(() => Category, (Category) => Category.products)
     category: Category;
+    @OneToMany(() => Order, (order) => order.Product)
+    order: Product[];
 }
