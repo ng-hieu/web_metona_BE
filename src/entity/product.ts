@@ -1,3 +1,4 @@
+import { Order } from '../entity/order';
 import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { Category } from "./categogy";
 import { Image } from "./image";
@@ -18,4 +19,6 @@ export class Product {
     image: Image[];
     @ManyToOne(() => Category, (Category) => Category.products)
     category: Category;
+    @OneToMany(() => Order, (order) => order.Product)
+    order: Product[];
 }

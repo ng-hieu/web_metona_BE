@@ -8,4 +8,5 @@ export declare class Product {
     descriptionProduct: string;
     image: Image[];
     category: Category;
+    order: Product[];
 }

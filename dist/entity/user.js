@@ -35,7 +35,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => bill_1.Bill, (bill) => bill.user),
+    (0, typeorm_1.OneToMany)(() => bill_1.Bill, (bill) => bill.account),
     __metadata("design:type", Array)
 ], User.prototype, "bill", void 0);
 exports.User = User = __decorate([

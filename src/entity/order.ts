@@ -1,5 +1,5 @@
 import { Product } from "./product";
-import { Bill } from "src/entity/bill";
+import { Bill } from "../entity/bill";
 
 import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 

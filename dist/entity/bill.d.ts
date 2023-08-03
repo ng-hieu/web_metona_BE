@@ -13,5 +13,6 @@ export declare class Bill {
     city: City;
     district: District;
     wards: Wards;
-    user: User;
+    account: User;
+    order: Bill[];
 }
