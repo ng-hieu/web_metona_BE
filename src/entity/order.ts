@@ -15,6 +15,4 @@ export class Order {
     bill: Order;
     @ManyToOne(() => Product, (product) => product.order)
     Product: Order;
-    // @Column()
-    // status: OrderStatus;
 }
