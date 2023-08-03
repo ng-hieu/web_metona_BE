@@ -7,6 +7,7 @@ declare class AdminService {
         };
         token: any;
     }>;
+    createAdmin: (user: any) => Promise<void>;
 }
 declare const _default: AdminService;
 export default _default;

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const adminController_1 = __importDefault(require("../controller/adminController"));
 const adminRouter = (0, express_1.Router)();
-adminRouter.post("/adminLogin", adminController_1.default.checkLogin);
+adminRouter.post('/', adminController_1.default.create);
+adminRouter.post("/login", adminController_1.default.checkLogin);
 exports.default = adminRouter;
 //# sourceMappingURL=admimRouter.js.map

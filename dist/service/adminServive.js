@@ -58,6 +58,11 @@ class AdminService {
             }
             throw new Error("Email not found");
         };
+        this.createAdmin = async (user) => {
+            let hashedPassword = bcrypt.hashSync(user.password, 10);
+            user.password = hashedPassword;
+            await this.AccountRepository.save(user);
+        };
     }
 }
 exports.default = new AdminService();
