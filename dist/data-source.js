@@ -12,6 +12,10 @@ exports.AppDataSource = new typeorm_1.DataSource({
     database: "website_metona",
     synchronize: true,
     logging: false,
+<<<<<<< HEAD
     entities: [__dirname + "/entity/*.{js, ts}"],
+=======
+    entities: [__dirname + '/entity/*.{js,ts}'],
+>>>>>>> ab27217ba34f0a06fea9fe05f6832fa8aa4c7770
 });
 //# sourceMappingURL=data-source.js.map
