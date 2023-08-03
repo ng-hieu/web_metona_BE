@@ -1,9 +1,9 @@
-import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { Product } from "./product";
 
 @Entity()
 export class Category {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idCategory: number;
     @Column()
     nameCategory: string;

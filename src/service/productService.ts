@@ -1,43 +1,43 @@
 import { Category } from './../entity/categogy';
-import { AppDataSource } from "src/data-source";
-import { Product } from "src/entity/product";
+import { AppDataSource } from "../data-source";
+import { Product } from "../entity/product";
 
-class ProductService{
+class ProductService {
     private productRepository;
-    constructor(){
+    constructor() {
         this.productRepository = AppDataSource.getRepository(Product)
     }
 
-    getAll = async (page, pageSize, getTotalCount=false)=>{
-        const skip = (page -1)* pageSize;
+    getAll = async (page, pageSize, getTotalCount = false) => {
+        const skip = (page - 1) * pageSize;
         const take = pageSize;
 
-        const [products,total]= await this.productRepository.findAndCount({
-            relations:{
-                category:true
+        const [products, total] = await this.productRepository.findAndCount({
+            relations: {
+                category: true
             },
             skip,
             take,
         });
-        const totalPages = Math.ceil(total/pageSize);
-        if(getTotalCount){
+        const totalPages = Math.ceil(total / pageSize);
+        if (getTotalCount) {
             return {
                 products,
                 totalCount: total,
                 totalPages,
             }
         } else {
-            return{
+            return {
                 products,
                 totalPages
             }
         }
     }
 
-    add = async (product)=>{
+    add = async (product) => {
         await this.productRepository.save(product);
     }
-    editProduct = async (id, product)=>{
+    editProduct = async (id, product) => {
         return await this.productRepository.update(
             { idProduct: id },
             {
@@ -51,21 +51,15 @@ class ProductService{
         );
     }
 
-    remove = async (id)=>{
-        let products = await this.productRepository.find(
-           {
-            where:{
-                product:{idProduct:id}
-            }
-           }
-        )
-        if(products){
+    remove = async (id) => {
             await this.productRepository.delete({
-                where:{
-                    products:{idProduct:id}
-                }
-            })
-        }
+              idProduct: id    
+            }) 
+    }
+    findProductByName = async (name) => {
+        let product = await this.productRepository.findOneBy(
+            { nameProduct: name })
+        return product[0]
     }
 }
 export default new ProductService();

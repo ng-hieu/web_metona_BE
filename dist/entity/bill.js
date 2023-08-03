@@ -14,10 +14,11 @@ const typeorm_1 = require("typeorm");
 const city_1 = require("./city");
 const district_1 = require("./district");
 const ward_1 = require("./ward");
+const user_1 = require("./user");
 let Bill = exports.Bill = class Bill {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Bill.prototype, "idBill", void 0);
 __decorate([
@@ -56,6 +57,10 @@ __decorate([
     (0, typeorm_1.ManyToOne)(() => ward_1.Wards, (wards) => wards.bill),
     __metadata("design:type", ward_1.Wards)
 ], Bill.prototype, "wards", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => user_1.User, (user) => user.bill),
+    __metadata("design:type", user_1.User)
+], Bill.prototype, "user", void 0);
 exports.Bill = Bill = __decorate([
     (0, typeorm_1.Entity)()
 ], Bill);

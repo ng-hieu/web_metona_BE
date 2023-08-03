@@ -1,7 +1,7 @@
-import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Admin {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     adminId: number;
     @Column()
     email: string;

@@ -6,7 +6,7 @@ import { Bill } from "./bill";
 
 @Entity()
 export class Wards {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id:number;
     @Column()
     name:string;

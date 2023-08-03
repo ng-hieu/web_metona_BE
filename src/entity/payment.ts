@@ -1,8 +1,8 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Payment{
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idPayment:number;
     @Column()
     ATM:string;

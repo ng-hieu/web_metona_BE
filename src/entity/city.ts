@@ -1,11 +1,11 @@
-import {Column, Entity, OneToMany, PrimaryColumn,} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn,} from "typeorm";
 import { District } from "./district";
 import { Bill } from "./bill";
 
 
 @Entity()
 export class City{
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id:number;
     @Column()
     name:string;

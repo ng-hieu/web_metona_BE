@@ -15,7 +15,7 @@ const product_1 = require("./product");
 let Category = exports.Category = class Category {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Category.prototype, "idCategory", void 0);
 __decorate([

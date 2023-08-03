@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { decode } from "punycode";
 import * as bcrypt from "bcrypt";
-import userService from "src/service/userService";
+import userService from "../service/userService";
 class UserController {
     findBillByPhoneNumber = async (req: Request, res: Response) => {
         try {

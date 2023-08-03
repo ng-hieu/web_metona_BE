@@ -17,7 +17,7 @@ const bill_1 = require("./bill");
 let District = exports.District = class District {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], District.prototype, "id", void 0);
 __decorate([

@@ -16,7 +16,7 @@ const bill_1 = require("./bill");
 let Wards = exports.Wards = class Wards {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Wards.prototype, "id", void 0);
 __decorate([

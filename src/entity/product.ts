@@ -1,10 +1,10 @@
-import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { Category } from "./categogy";
 import { Image } from "./image";
 
 @Entity()
 export class Product {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idProduct:number;
     @Column({type:"varchar"})
     nameProduct:string;

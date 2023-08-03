@@ -1,6 +1,7 @@
 import { City } from "./city";
 import { District } from "./district";
 import { Wards } from "./ward";
+import { User } from "./user";
 export declare class Bill {
     idBill: number;
     name: string;
@@ -12,4 +13,5 @@ export declare class Bill {
     city: City;
     district: District;
     wards: Wards;
+    user: User;
 }

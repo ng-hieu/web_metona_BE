@@ -16,7 +16,7 @@ const bill_1 = require("./bill");
 let City = exports.City = class City {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], City.prototype, "id", void 0);
 __decorate([

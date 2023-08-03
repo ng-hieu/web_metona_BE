@@ -1,12 +1,12 @@
-import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { City } from "./city";
 import { District } from "./district";
 import { Wards } from "./ward";
-import { Account } from "./user";
+import { User } from "./user";
 
 @Entity()
 export class Bill {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idBill: number;
     @Column()
     name: string;
@@ -26,6 +26,6 @@ export class Bill {
     district: District;
     @ManyToOne(() => Wards, (wards) => wards.bill)
     wards: Wards;
-    @ManyToOne(() => Account, (account) => account.bill)
-    account: Account;
+    @ManyToOne(() => User, (user) => user.bill)
+    user: User;
 }

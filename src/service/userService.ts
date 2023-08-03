@@ -1,5 +1,5 @@
-import { AppDataSource } from "src/data-source";
-import { User } from "src/entity/user";
+import { AppDataSource } from "../data-source";
+import { User } from "../entity/user";
 class UserService {
     private userRepository = AppDataSource.getRepository(User);
     findBillByPhoneNumber = async (phoneNumber) => {

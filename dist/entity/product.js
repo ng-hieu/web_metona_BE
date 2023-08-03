@@ -16,7 +16,7 @@ const image_1 = require("./image");
 let Product = exports.Product = class Product {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Product.prototype, "idProduct", void 0);
 __decorate([
