@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const data_source_1 = require("src/data-source");
-const product_1 = require("src/entity/product");
+const data_source_1 = require("../data-source");
+const product_1 = require("../entity/product");
 class ProductService {
     constructor() {
         this.getAll = async (page, pageSize, getTotalCount = false) => {
@@ -43,18 +43,13 @@ class ProductService {
             });
         };
         this.remove = async (id) => {
-            let products = await this.productRepository.find({
-                where: {
-                    product: { idProduct: id }
-                }
+            await this.productRepository.delete({
+                idProduct: id
             });
-            if (products) {
-                await this.productRepository.delete({
-                    where: {
-                        products: { idProduct: id }
-                    }
-                });
-            }
+        };
+        this.findProductByName = async (name) => {
+            let product = await this.productRepository.findOneBy({ nameProduct: name });
+            return product[0];
         };
         this.productRepository = data_source_1.AppDataSource.getRepository(product_1.Product);
     }

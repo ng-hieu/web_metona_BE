@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 let Payment = exports.Payment = class Payment {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Payment.prototype, "idPayment", void 0);
 __decorate([

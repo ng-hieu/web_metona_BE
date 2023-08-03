@@ -12,6 +12,6 @@ export class User {
     phoneNumber: string;
     @Column()
     email: string;
-    @OneToMany(() => Bill, (bill) => bill.account)
+    @OneToMany(() => Bill, (bill) => bill.user)
     bill: Bill[];
 }

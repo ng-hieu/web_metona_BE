@@ -1,9 +1,9 @@
+
 import express from 'express';
 import bodyParser from "body-parser";
 import cors from 'cors';
 import { AppDataSource } from './data-source';
 import router from './router/router';
-
 
 const app = express();
 

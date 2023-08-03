@@ -10,14 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Product = void 0;
-const order_1 = require("src/entity/order");
 const typeorm_1 = require("typeorm");
 const categogy_1 = require("./categogy");
 const image_1 = require("./image");
 let Product = exports.Product = class Product {
 };
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
 ], Product.prototype, "idProduct", void 0);
 __decorate([
@@ -44,10 +43,6 @@ __decorate([
     (0, typeorm_1.ManyToOne)(() => categogy_1.Category, (Category) => Category.products),
     __metadata("design:type", categogy_1.Category)
 ], Product.prototype, "category", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => order_1.Order, (order) => order.Product),
-    __metadata("design:type", Array)
-], Product.prototype, "order", void 0);
 exports.Product = Product = __decorate([
     (0, typeorm_1.Entity)()
 ], Product);

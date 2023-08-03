@@ -1,4 +1,3 @@
-import { Order } from './order';
 import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { City } from "./city";
 import { District } from "./district";
@@ -27,8 +26,6 @@ export class Bill {
     district: District;
     @ManyToOne(() => Wards, (wards) => wards.bill)
     wards: Wards;
-    @ManyToOne(() => User, (account) => account.bill)
-    account: User;
-    @OneToMany(() => Order, (order) => order.bill)
-    order: Bill[];
+    @ManyToOne(() => User, (user) => user.bill)
+    user: User;
 }

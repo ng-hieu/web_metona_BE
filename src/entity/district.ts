@@ -7,7 +7,7 @@ import { Bill } from "./bill";
 
 @Entity()
 export class District {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     id:number;
     @Column()
     name:string;

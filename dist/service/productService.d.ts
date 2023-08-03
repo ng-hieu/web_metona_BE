@@ -13,6 +13,7 @@ declare class ProductService {
     add: (product: any) => Promise<void>;
     editProduct: (id: any, product: any) => Promise<any>;
     remove: (id: any) => Promise<void>;
+    findProductByName: (name: any) => Promise<any>;
 }
 declare const _default: ProductService;
 export default _default;

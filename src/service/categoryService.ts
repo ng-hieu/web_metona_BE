@@ -1,5 +1,5 @@
 
-import { Category } from "src/entity/categogy";
+import { Category } from "../entity/categogy";
 import {AppDataSource} from "../data-source";
 
 class CategoryService {
@@ -9,14 +9,15 @@ class CategoryService {
         this.categoryRepository = AppDataSource.getRepository(Category);
     }
 
-    getAll = async () => {
+    getAllCategory = async () => {
         let categories = await this.categoryRepository.find();
         return categories;
     }
-
-    getAllCategory = async () => {
-        let products = await this.categoryRepository.find();
-        return products;
+    addCategory = async (nameCategory) => {
+        await this.categoryRepository.save(nameCategory);
+    }
+    removeCategory = async (idCategory) => {
+        await this.categoryRepository.delete({idCategory: idCategory});
     }
 
 }
