@@ -1,7 +1,6 @@
 import { Product } from "./../entity/product";
-import { AppDataSource } from "src/data-source";
-import { Order } from "src/entity/order";
-import { User } from "src/entity/user";
+import { AppDataSource } from "../data-source";
+import { Order } from "../entity/order";
 class OrderService {
     private userRepository = AppDataSource.getRepository(Order);
     showAllOrder = async () => {

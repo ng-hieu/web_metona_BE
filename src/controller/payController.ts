@@ -1,6 +1,6 @@
 import { Pay } from './../entity/pay';
 import { Request, Response } from "express";
-import payService from 'src/service/payService';
+import payService from '../service/payService';
 class PayController {
     findPayById = async (req: Request, res: Response) => {
         try {

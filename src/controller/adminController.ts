@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import adminServive from "src/service/adminServive";
+import adminServive from "../service/adminServive";
 class AdminController {
     checkLogin = async (req: Request, res: Response) => {
         try {

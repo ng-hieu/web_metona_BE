@@ -1,8 +1,8 @@
-import { AppDataSource } from "src/data-source";
+import { AppDataSource } from "../data-source";
 import * as bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
-import { SECRET } from "src/middleware/auth";
-import { Admin } from "src/entity/admin";
+import { SECRET } from "../middleware/auth";
+import { Admin } from "../entity/admin";
 
 class AdminService {
     private AccountRepository = AppDataSource.getRepository(Admin);

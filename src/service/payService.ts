@@ -1,6 +1,6 @@
-import { AppDataSource } from "src/data-source";
+import { AppDataSource } from "../data-source";
 
-import { Pay } from "src/entity/pay";
+import { Pay } from "../entity/pay";
 
 class PayService {
     private userRepository = AppDataSource.getRepository(Pay);

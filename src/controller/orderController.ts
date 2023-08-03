@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import adminServive from "src/service/adminServive";
-import orderService from "src/service/orderService";
+
+import orderService from "../service/orderService";
 class OrderController {
     getAllOrder = async (req: Request, res: Response) => {
         try {
