@@ -2,28 +2,30 @@ import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
 import { City } from "./city";
 import { District } from "./district";
 import { Wards } from "./ward";
+import { Account } from "./user";
 
 @Entity()
-export class Bill{
+export class Bill {
     @PrimaryColumn()
-    idBill:number;
+    idBill: number;
     @Column()
-    name:string;
+    name: string;
     @Column()
-    phone:string;
+    phone: string;
     @Column()
-    email:string;
+    email: string;
     @Column()
-    status:boolean;
+    status: boolean;
     @Column()
-    totalPrice:number;
+    totalPrice: number;
     @Column()
-    totalQuantity:number;
+    totalQuantity: number;
     @ManyToOne(() => City, (city) => city.bill)
     city: City;
     @ManyToOne(() => District, (district) => district.bill)
     district: District;
     @ManyToOne(() => Wards, (wards) => wards.bill)
     wards: Wards;
-
+    @ManyToOne(() => Account, (account) => account.bill)
+    account: Account;
 }
