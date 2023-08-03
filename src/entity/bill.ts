@@ -1,5 +1,5 @@
 import { Order } from './order';
-import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { City } from "./city";
 import { District } from "./district";
 import { Wards } from "./ward";
@@ -7,7 +7,7 @@ import {  User } from "./user";
 
 @Entity()
 export class Bill {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idBill: number;
     @Column()
     name: string;

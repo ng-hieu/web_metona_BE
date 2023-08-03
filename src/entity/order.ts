@@ -1,11 +1,11 @@
 import { Product } from "./product";
 import { Bill } from "src/entity/bill";
 
-import { Column, Entity, ManyToOne, PrimaryColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Order {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     idOrder: number;
     @Column()
     priceCurren: number;
