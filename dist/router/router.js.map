@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"file":"router.js","sourceRoot":"","sources":["../../src/router/router.ts"],"names":[],"mappings":""}
-=======
-{"version":3,"file":"router.js","sourceRoot":"","sources":["../../src/router/router.ts"],"names":[],"mappings":";;;;;AAAA,qCAAiC;AACjC,oEAA4C;AAE5C,MAAM,MAAM,GAAG,IAAA,gBAAM,GAAE,CAAC;AACxB,MAAM,CAAC,GAAG,CAAC,SAAS,EAAC,uBAAa,CAAC,CAAA"}
->>>>>>> ab27217ba34f0a06fea9fe05f6832fa8aa4c7770
+{"version":3,"file":"router.js","sourceRoot":"","sources":["../../src/router/router.ts"],"names":[],"mappings":";;;;;AAAA,qCAAiC;AACjC,oEAA4C;AAC5C,sEAA8C;AAC9C,gEAAwC;AACxC,gEAAwC;AACxC,8DAAsC;AACtC,4DAAoC;AAEpC,MAAM,MAAM,GAAG,IAAA,gBAAM,GAAE,CAAC;AACxB,MAAM,CAAC,GAAG,CAAC,SAAS,EAAC,uBAAa,CAAC,CAAC;AACpC,MAAM,CAAC,GAAG,CAAC,WAAW,EAAE,wBAAc,CAAC,CAAC;AACxC,MAAM,CAAC,GAAG,CAAC,cAAc,EAAE,qBAAW,CAAC,CAAC;AACxC,MAAM,CAAC,GAAG,CAAC,OAAO,EAAE,oBAAU,CAAC,CAAC;AAChC,MAAM,CAAC,GAAG,CAAC,SAAS,EAAE,qBAAW,CAAC,CAAC;AACnC,MAAM,CAAC,GAAG,CAAC,OAAO,EAAE,mBAAS,CAAC,CAAC;AAE/B,kBAAe,MAAM,CAAC"}

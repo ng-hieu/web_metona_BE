@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from "body-parser";
 import cors from 'cors';
 import { AppDataSource } from './data-source';
+import router from './router/router';
+
 
 const app = express();
 
@@ -17,7 +19,7 @@ app.use(cors());
 //     console.log(req.params)
 //     next()
 // })
-// app.use('', router)
+app.use('', router)
 app.listen(8000, () => {
     console.log('Server 8000 is running')
 })

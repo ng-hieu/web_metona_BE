@@ -13,3 +13,5 @@ router.use('/adminManage', adminRouter);
 router.use('/user', userRouter);
 router.use("/orders", orderRouter);
 router.use("/pays", payRouter);
+
+export default router;
