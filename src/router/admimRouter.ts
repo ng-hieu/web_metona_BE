@@ -6,4 +6,5 @@ const adminRouter=Router();
 adminRouter.post('/', adminController.create)
 adminRouter.post("/login", adminController.checkLogin);
 
+
 export default adminRouter;
